@@ -2,8 +2,25 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.scss";
+import React from "react";
+import useHttp from "../utils/hooks/use-http";
 
 const Home: NextPage = () => {
+  const { isLoading, error, sendRequest } = useHttp();
+
+  const handleFetchData = (fetchedData) => {
+    console.log(fetchedData);
+  };
+
+  React.useEffect(() => {
+    sendRequest(
+      {
+        url: "https://raw.githubusercontent.com/hexschool/2021-ui-frontend-job/master/frontend_data.json",
+      },
+      handleFetchData
+    );
+  }, []);
+
   return (
     <div className={styles.container}>
       <Head>
