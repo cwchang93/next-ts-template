@@ -18,3 +18,9 @@ export const findKey = (obj, fn) =>
 //     },
 //     o => o['active']
 //   ); // 'barney'
+
+export interface ICommonProps {
+  className?: string;
+}
+
+

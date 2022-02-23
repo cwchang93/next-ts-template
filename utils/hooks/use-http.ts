@@ -1,5 +1,5 @@
 import { useState, useCallback } from "react";
-import { I_HTTP_REQCONFIG } from "../../typings/hooks-type";
+import { I_HTTP_REQCONFIG } from "typings/hooks-type";
 
 function useHttp() {
   const [isLoading, setIsLoading] = useState(false);

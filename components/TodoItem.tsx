@@ -1,3 +1,4 @@
+import React from "react";
 const TodoItem: React.FC<{ text: string; onRemoveTodo: () => void }> = (
   props
 ) => {
