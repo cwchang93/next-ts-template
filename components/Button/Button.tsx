@@ -1,6 +1,6 @@
 import * as React from "react";
 import cx from "classnames";
-import { ICommonProps } from "../../utils/common/index";
+import { ICommonProps } from "utils/common/index";
 import { StyledButton, StyledLink } from "./style";
 
 export interface IButtonProps extends ICommonProps {

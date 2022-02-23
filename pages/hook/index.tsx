@@ -14,8 +14,8 @@ const PageHooks = () => {
     };
   }, [count]);
 
-  const isEvenNumber = count % 2 === 0;
-  const addCount = () => setCount(count + 1);
+  const isEvenNumber = React.useMemo(() => count % 2 === 0, [count]);
+  const addCount = React.useCallback(() => setCount(count + 1), [count]);
 
   return (
     <>
